@@ -1,0 +1,47 @@
+.Card-form-container{
+
+  .Checkout-form-card{
+    width: 450px;
+    height: 525px;
+    padding: 4%;
+  
+    #form-input-container{
+      margin-top: 25%;
+  
+      #card-number-formControl, #card-name-formControl{
+        width:355px;
+        margin: 2% 2% 6% 2%;
+      }
+    
+      #ex-date-lable{
+        display: flex;
+        justify-content: left;
+        margin-left: 10.5%;
+      }
+    
+      #ex-cvv-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        #ex-month-formControl, #ex-year-formControl{
+          width: 100px;
+          margin: 2%;
+        }
+      
+        #cvv-formControl{
+          width: 100px;
+          margin: 2% 2% 2% 6%;
+        }
+      }
+    
+      #submit-button{
+        width: 200px;
+        padding: 2%;
+        margin-top: 8%;
+        font-size: 16pt;
+      }
+    }
+  }
+}
+
