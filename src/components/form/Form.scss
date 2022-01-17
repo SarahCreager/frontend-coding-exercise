@@ -1,11 +1,11 @@
-.Card-form-container{
+.card-form-container{
 
-  .Checkout-form-card{
+  .checkout-form {
     width: 450px;
     height: 525px;
     padding: 4%;
   
-    #form-input-container{
+    .form-input-container{
       margin-top: 25%;
   
       #card-number-formControl, #card-name-formControl{
@@ -19,7 +19,7 @@
         margin-left: 10.5%;
       }
     
-      #ex-cvv-div{
+      .ex-cvv-div{
         display: flex;
         flex-direction: row;
         justify-content: center;
