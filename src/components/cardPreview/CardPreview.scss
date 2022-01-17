@@ -1,89 +1,138 @@
 
-#card-chip{
+.card-container {
   position: relative;
-  width: 50px;
-  top: 370px;
-  right: 68px;
-  z-index: 1;
-}
+  transform-style: preserve-3d;
+  box-sizing: border-box;
 
-#card-visa{
-  position: relative;
-  width: 80px;
-  top: 370px;
-  left: 110px;
-  z-index: 1;
-}
+  &.flipped {
+      .card-front {
+          transform: rotateY(180deg);
+      }
+      .card-back {
+          transform: rotateY(0deg);
+      }
+  }
+  .card-front,
+  .card-back {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: block;
+      padding: 10px;
+      position: absolute;
+      border-radius: 8px;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transition: -webkit-transform ease 500ms;
+      transition: transform ease 500ms;
+  }
+  .card-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+  }
+  .card-back {
+      transform: rotateY(-180deg);
+      padding: 20px;
+      font-size: 20px;
+  }
 
-#card-number {
-  position: relative;
-  top: 370px;
-  left: 15px;
-  z-index: 1;
-  font-size: 30px;
-}
+  #card-front-media, #card-back-media{
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 6px 6px #726F8F;
+  }
 
-#card-name-title{
-  position: relative;
-  top: 370px;
-  right: 92px;
-  margin-bottom: 2px;
-  z-index: 1;
-  font-size: 10px;
-  color: rgb(190, 190, 190);
-}
+  #card-front-media{
+    position: relative;
+    bottom: 380px;
+    left: 20px;
+  }
+  
+  #card-back-media{
+    position: relative;
+    bottom: 215px;
+    left: 18px;
+  }
 
-#card-name-input{
-  margin-top: 4px;
-  position: relative;
-  top: 370px;
-  left: 84px;
-  z-index: 1;
-  font-size: 15px;
-  width: 150px;
-}
-
-#ex-preview-container{
-  position: relative;
-  top: 310px;
-  left: 330px;
-  width: 70px;
-  height: 50px;
-  z-index: 1;
-  font-size: 12px;
-  border: solid 2px rgb(117, 117, 117);
-  border-radius: 8px;
-
-  #expires-title{
-    margin-top: 8px;
+  #card-chip{
+    position: relative;
+    width: 50px;
+    bottom: 115px;
+    right: 68px;
+    z-index: 1;
+  }
+  
+  #card-visa{
+    position: relative;
+    width: 80px;
+    bottom: 110px;
+    left: 120px;
+    z-index: 1;
+  }
+  
+  #card-number {
+    position: relative;
+    bottom: 110px;
+    left: 15px;
+    z-index: 1;
+    font-size: 30px;
+  }
+  
+  #card-name-title{
+    position: relative;
+    bottom: 100px;
+    right: 98px;
     margin-bottom: 2px;
+    z-index: 1;
+    font-size: 10px;
     color: rgb(190, 190, 190);
   }
+  
+  #card-name-input{
+    margin-top: 4px;
+    position: relative;
+    bottom: 100px;
+    left: 70px;
+    z-index: 1;
+    font-size: 15px;
+    width: 150px;
+  }
 
-  #expiration-input {
-    display: inline;
+  #ex-preview-container{
+    position: relative;
+    bottom: 170px;
+    left: 320px;
+    width: 70px;
+    height: 50px;
+    z-index: 1;
+    font-size: 12px;
+    border: solid 2px rgb(117, 117, 117);
+    border-radius: 8px;
+  
+    #expires-title{
+      margin-top: 8px;
+      margin-bottom: 2px;
+      color: rgb(190, 190, 190);
+    }
+  
+    #expiration-input {
+      display: inline;
+    }
+  }
+
+  #cvv{
+    position: relative;
+    bottom: 70px;
+    left: 66px;
+    z-index: 8;
+    height: 15px;
+    background-color: white;
+    color: black;
+    width: 300px;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 16px;
+    padding: 2%;
   }
 }
 
-#card-preview-media{
-  position: relative;
-  top: 100px;
-  left: 68px;
-  width: 350px;
-  border-radius: 8px;
-  box-shadow: 0px 6px 6px 6px #818181;
-}
-
-#cvv{
-  position: relative;
-  top: 250px;
-  left: 84px;
-  z-index: 1;
-  background-color: white;
-  color: black;
-  width: 300px;
-  border-radius: 8px;
-  text-align: right;
-  font-size: 16px;
-  padding: 2%;
-}

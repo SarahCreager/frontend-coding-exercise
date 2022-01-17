@@ -1,6 +1,12 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #333b58;
+  background-repeat: no-repeat;
+  background-image: url("./assets/background.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 1080px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
