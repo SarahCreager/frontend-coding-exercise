@@ -132,6 +132,7 @@ When the user submits the form, the current state and sample payload will log to
 * [W3 Schools](https://www.w3schools.com/)
 * [ReactJS](https://reactjs.org/)
 * [GitHub Projects](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects)
+* [Flipping Card in React](https://codepen.io/elliempatten/pen/KxmoGR)
 
 ## Future Implementations
 
