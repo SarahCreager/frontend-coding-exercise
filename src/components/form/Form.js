@@ -58,10 +58,11 @@ function Form() {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log('current state: ', card);
+    // let response = await axios.post(`${REACT_APP_SERVER}/checkout`, { name: card.name });
   }
 
   return (
-    <div className="card-form-container">
+    <div className="form-container">
       <CardPreview card={card} showCardBack={showCardBack} />
       <Card className="checkout-form">
         <div className="form-input-container">

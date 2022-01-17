@@ -1,4 +1,5 @@
-.card-form-container{
+
+.form-container{
 
   .checkout-form {
     width: 450px;
@@ -40,6 +41,14 @@
         padding: 2%;
         margin-top: 8%;
         font-size: 16pt;
+        background-image: linear-gradient(to right, #c46d9b , #6F4B98);
+        border-radius: 8px;
+        transition: background-image 0.8s ease-in-out;
+
+        &:hover{
+          background-image: linear-gradient(to right, #f189c0 , #9e6dd7);
+        }
+
       }
     }
   }
