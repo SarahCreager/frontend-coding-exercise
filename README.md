@@ -43,6 +43,7 @@ Build a credit card entry form using React to showcase your talent as a develope
     * @testing-library/jest-dom
     * @testing-library/react
     * @testing-library/user-event
+    * axios
     * react
     * react-dom
     * react-if
@@ -135,13 +136,22 @@ When the user submits the form, the current state and sample payload will log to
 * [ReactJS](https://reactjs.org/)
 * [GitHub Projects](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects)
 * [Flipping Card in React](https://codepen.io/elliempatten/pen/KxmoGR)
+* [Setting up ESLint in React](https://medium.com/@RossWhitehouse/setting-up-eslint-in-react-c20015ef35f7)
 
 ## Future Implementations
 
 * Ability to toggle hide card number in preview
 
-* Limit card name input to certain characters
+* Limit card name input to alphabet characters only
+
+* Fix styling when more than 40 characters are typed in card name, the characters extend beyond the card
 
 * Display an error below the form if input is not in the correct format
+
+* Add transition animation to gradient button
+
+* Change the color of active input fields in form
+
+* Make all form fields required and display error on submit if they are not filled in properly
 
 * Create a test suite
