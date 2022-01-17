@@ -18,7 +18,7 @@ function CardPreview(props) {
           <img id="card-visa" src={visa} alt="visa" />
 
           <h3 id="card-number">
-            {number ? `${number.slice(0, 4)} **** **** ${number.slice(12)}` : '**** **** **** ****'}
+            {number ? number.length < 13  ? `${number.slice(0, 4)} **** **** ****` : `${number.slice(0, 4)} **** **** ${number.slice(12)}` : '**** **** **** ****'}
           </h3>
           <h5 id="card-name-title">Card Holder</h5>
           <h4 id="card-name-input">{name ? name : 'Your Name Here'}</h4>
