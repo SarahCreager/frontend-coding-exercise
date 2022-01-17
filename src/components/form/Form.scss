@@ -14,7 +14,7 @@
         margin: 2% 2% 6% 2%;
       }
     
-      #ex-date-lable{
+      #ex-date-label{
         display: flex;
         justify-content: left;
         margin-left: 10.5%;
@@ -43,12 +43,10 @@
         font-size: 16pt;
         background-image: linear-gradient(to right, #c46d9b , #6F4B98);
         border-radius: 8px;
-        transition: background-image 0.8s ease-in-out;
 
         &:hover{
           background-image: linear-gradient(to right, #f189c0 , #9e6dd7);
         }
-
       }
     }
   }

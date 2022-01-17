@@ -1,6 +1,7 @@
 import './Form.scss';
 import { useState } from 'react';
 import CardPreview from '../cardPreview/CardPreview.js';
+// import axios from 'axios'; COMMENTED OUT SINCE WE DON'T HAVE A SERVER
 
 import Card from '@mui/material/Card';
 import FormControl from '@mui/material/FormControl';
@@ -11,30 +12,19 @@ import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import FormLabel from '@mui/material/FormLabel';
 
-
-// const ITEM_HEIGHT = 48;
-// const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: 48 * 4.5 + 8,
-      width: 250,
-    },
-  },
-};
-
 function Form() {
+
   const months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
   const years = ['2022', '2023', '2024', '2025', '2026', '2027'];
 
   const [showCardBack, setshowCardBack] = useState(false);
 
   const [card, setCardInfo] = useState({
+    number: '',
+    name: '',
     exMonth: '',
     exYear: '',
     cvv: '',
-    number: '',
-    name: '',
   });
 
   const handleChange = (event) => {
@@ -58,9 +48,40 @@ function Form() {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log('current state: ', card);
-    // let response = await axios.post(`${REACT_APP_SERVER}/checkout`, { name: card.name });
+
+    // COMMENTED OUT SINCE WE CAN'T ACTUALLY CONNECT TO SERVER
+  
+    // let response = await axios.post(`${REACT_APP_SERVER}/checkout`, { 
+    //   number: card.number,
+    //   name: card.name,
+    //   exMonth: card.exMonth,
+    //   exYear: card.exYear,
+    //   cvv: card.cvv,
+    // });
+
+    // console.log('response: ', response);
+    resetState();
   }
 
+  function resetState() {
+    setCardInfo({
+      number: '',
+      name: '',
+      exMonth: '',
+      exYear: '',
+      cvv: '',
+    });
+  }
+
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: 48 * 4.5 + 8,
+        width: 250,
+      },
+    },
+  };
+  
   return (
     <div className="form-container">
       <CardPreview card={card} showCardBack={showCardBack} />
@@ -95,7 +116,7 @@ function Form() {
               }}
             />
           </FormControl>
-          <FormLabel id="ex-date-lable">Expiration Date</FormLabel>
+          <FormLabel id="ex-date-label">Expiration Date</FormLabel>
           <div className="ex-cvv-div">
             <FormControl id="ex-month-formControl">
               <InputLabel id="ex-month-select-label">Month</InputLabel>
@@ -124,6 +145,7 @@ function Form() {
                 label="expiration-year"
                 onClick={handleClick}
                 onChange={handleChange}
+                MenuProps={MenuProps}
               >
                 {years.map((year, idx) => (
                   <MenuItem key={idx} value={year}>{year}</MenuItem>
