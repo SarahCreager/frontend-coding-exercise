@@ -1,5 +1,4 @@
 import './CardPreview.scss';
-// import CardMedia from '@mui/material/CardMedia';
 import cardFrontPreview from '../../assets/cardFront.jpeg';
 import cardBackPreview from '../../assets/cardBack.jpg';
 import chip from '../../assets/chip.png';
@@ -7,6 +6,7 @@ import visa from '../../assets/visa.png';
 
 
 function CardPreview(props) {
+
   const { name, exMonth, exYear, cvv, number } = props.card;
   const { showCardBack } = props;
 
@@ -16,9 +16,13 @@ function CardPreview(props) {
         <div className="card-front">
           <img id="card-chip" src={chip} alt="chip" />
           <img id="card-visa" src={visa} alt="visa" />
-
           <h3 id="card-number">
-            {number ? number.length < 13  ? `${number.slice(0, 4)} **** **** ****` : `${number.slice(0, 4)} **** **** ${number.slice(12)}` : '**** **** **** ****'}
+            {number ?
+              number.length < 13 ?
+                `${number.slice(0, 4)} **** **** ****`
+                : `${number.slice(0, 4)} **** **** ${number.slice(12)}`
+              : '**** **** **** ****'
+            }
           </h3>
           <h5 id="card-name-title">Card Holder</h5>
           <h4 id="card-name-input">{name ? name : 'Your Name Here'}</h4>

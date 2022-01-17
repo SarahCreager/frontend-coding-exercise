@@ -10,6 +10,7 @@
     "fail":true
   },
   "extends": "eslint:recommended",
+  "plugin":"react/recommended",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2018
@@ -22,3 +23,5 @@
     "semi": [ "error", "always" ]
   }
 }
+
+// Utilized from Code Fellows Configs https://github.com/codefellows/seattle-code-javascript-401d44/blob/main/configs/.eslintrc.json
