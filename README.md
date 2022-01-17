@@ -1,5 +1,5 @@
 <div align="center">
-<img width="350px" src="./public/logo.png">
+<img width="350px" src="./public/bannerLogo.png">
 </div>
 <h1 align="center">Motient Frontend Coding Exercise</h1>
 
