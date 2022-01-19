@@ -1,27 +1,24 @@
 {
-  "env": {
-    "browser": true,
-    "node": true,
-    "commonjs": true,
-    "jest": true,
-    "es6": true
-  },
-  "globals": {
-    "fail":true
-  },
-  "extends": "eslint:recommended",
-  "plugin":"react/recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2018
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
   },
   "rules": {
-    "no-console": "off",
-    "indent": [ "error", 2 ],
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "comma-dangle": ["error", "always-multiline"],
-    "semi": [ "error", "always" ]
+    "eqeqeq": ["error", "always"],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }
 
-// Utilized from Code Fellows Configs https://github.com/codefellows/seattle-code-javascript-401d44/blob/main/configs/.eslintrc.json
+// Utilized Code Fellows Configs https://github.com/codefellows/seattle-code-javascript-401d44/blob/main/configs/.eslintrc.json and https://github.com/Beers15/jangle-front/blob/main/.eslintrc.json to create this eslint.
